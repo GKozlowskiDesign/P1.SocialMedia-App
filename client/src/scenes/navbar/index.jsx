@@ -21,7 +21,7 @@ import {
   Close,
 } from "@mui/icons-material";
 import { useDispatch, useSelector } from "react-redux";
-import { setMode, setLogout } from "../../state";
+import { setMode, setLogout } from "../../state/index";
 import { useNavigate } from "react-router-dom";
 import FlexBetween from "../../components/FlexBetween";
 
@@ -39,7 +39,7 @@ const Navbar = () => {
   const primaryLight = theme.palette.primary.light;
   const alt = theme.palette.background.alt;
 
-  const fullName = `${user.firstName} ${user.lastName}`;
+  const fullName = `${user.firstName}  ${user.lastName}`;
 
   return (
     <FlexBetween padding="1rem 6%" backgroundColor={alt}>
@@ -56,7 +56,7 @@ const Navbar = () => {
             },
           }}
         >
-          Sociopedia
+          MVoT
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
